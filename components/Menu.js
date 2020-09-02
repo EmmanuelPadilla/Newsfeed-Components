@@ -48,18 +48,19 @@ function menuMaker(menuItems) {
   
   const menu = document.createElement('div');
   const menuList = document.createElement('ul');
-  const liElement = document.createElement('li')
+  // const liElement = document.createElement('li')
 
   menu.classList.add('menu')
   
   button.appendChild(menu)
   menu.appendChild(menuList)
-  menuList.appendChild(liElement)
+  // menuList.appendChild(liElement)
 
   menuItems.forEach(item  => {
-    let text = document.createnode(item)
-    liElement.appendChild(text)
-    menuList.appendChild(liElement)
+    const text = document.createElement('li')
+    text.textContent = item
+    // liElement.appendChild(text)
+    menuList.appendChild(text)
   })
   
   button.addEventListener('click', (event) => {
